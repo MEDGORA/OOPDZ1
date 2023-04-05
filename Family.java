@@ -1,16 +1,18 @@
-public class Family extends Person {
+public class Family extends Person implements iPrinter {
 
     public Family(String personName, String personSurname, Integer personAge, String personSex){
         super(personName, personSurname, personAge, personSex);
     }
 
-    static Person person1 = new Person("Иван", "Лебедев", 57, "мужской");
-    static Person person2 = new Person("Тарас", "Лебедев", 32, "мужской");
-    static Person person3 = new Person("Антон", "Лебедев", 18, "мужской");
-    static Person person4 = new Person("Аня", "Мальская", 30, "женский");
-    static Person person5 = new Person("Нина", "Тольская", 60, "мужской");
-
-    public static void getFamily(Person Person) {
+    Person person1 = new Person("Иван", "Лебедев", 57, "мужской");
+    Person person2 = new Person("Тарас", "Лебедев", 32, "мужской");
+    Person person3 = new Person("Антон", "Лебедев", 18, "мужской");
+    Person person4 = new Person("Аня", "Мальская", 30, "женский");
+    Person person5 = new Person("Нина", "Тольская", 60, "мужской");
+    
+    
+    @Override
+    public void getFamily(Person Person) {
         if (Person.hashCode() == person1.hashCode()){
             System.out.println("Жена: " + person5);
             System.out.println("Ребёнок: " + person2);

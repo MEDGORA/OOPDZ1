@@ -20,6 +20,7 @@ public class task {
         Person person4 = new Person("Аня", "Мальская", 30, "женский");
         Person person5 = new Person("Нина", "Тольская", 60, "мужской");
 
+        
         Family.getFamily(person1);
         System.out.println();
         Family.getFamily(person2);
